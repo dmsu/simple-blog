@@ -5,4 +5,5 @@ Desktop.ini
 *.iml
 .idea
 node_modules
+*.log
 
