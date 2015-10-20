@@ -1,7 +1,9 @@
+var sidebar = require('../helpers/sidebar');
+
 module.exports = {
 	index: function(req, res){
-		var	viewModel	=	{
-			images:	[
+		var viewModel = {
+			images: [
 				{
 					uniqueId:		1,
 					title:			'Sample	Image	1',
@@ -37,6 +39,8 @@ module.exports = {
 				}
 			]
 		};
-		res.render('index.handlebars', viewModel);
+		sidebar(viewModel, function(viewModel){
+			res.render('index.handlebars', viewModel);
+		});
 	}	
 };
